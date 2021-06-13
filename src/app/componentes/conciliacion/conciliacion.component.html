@@ -100,13 +100,24 @@
 
 
                     </div>
-
+                    <div align="right">
+                        <div class="col-5">
+                            <div class="chart" *ngIf="pieChartData">
+                                <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" [legend]="pieChartLegend">
+                            </canvas>
+                            </div>
+                        </div>
+                    </div>
                 </form>
 
 
 
             </div>
+
         </div>
+
+
+
     </div>
 
 </div>

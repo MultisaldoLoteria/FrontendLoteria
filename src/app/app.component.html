@@ -26,11 +26,25 @@
                           <mat-icon>fingerprint</mat-icon>
                           <span >Inicio sesión</span>
                   </button>
-
-                    <button mat-menu-item [routerLink]="['conciliacion']" *ngIf="identity">
+                    <div *ngIf="identity">
+                        <button mat-menu-item [routerLink]="['conciliacion']" *ngIf="identity.rol== 'operador'">
                     <mat-icon>home_work</mat-icon>
                     <span>Conciliacion</span>
                 </button>
+                    </div>
+                    <div *ngIf="identity">
+                        <button mat-menu-item [routerLink]="['conciliacion']" *ngIf="identity.rol== 'admi'">
+                <mat-icon>home_work</mat-icon>
+                <span>Conciliacion</span>
+            </button>
+                    </div>
+                    <div *ngIf="identity">
+                        <button mat-menu-item [routerLink]="['seguridad']" *ngIf="identity.rol == 'admi'">
+                    <mat-icon>verified_user</mat-icon>
+                    <span >Seguridad</span>
+                </button>
+                    </div>
+
                     <button mat-menu-item (click)="logout()" *ngIf="identity">
                     <mat-icon>power_settings_new</mat-icon>
                     <span >Cierre sesión</span>

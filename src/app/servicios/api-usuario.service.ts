@@ -15,7 +15,7 @@ export class ApiUsuarioService {
   constructor(
     private http: HttpClient
   ) { 
-    this.url = _global.url;
+    this.url = _global.url1;
   }
   private extractData(res: Response){
     let body = res;

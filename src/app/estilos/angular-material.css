@@ -7,13 +7,15 @@
 }
 
 .example-container>* {
-    width: 100%;
+    width: 95%;
 }
 
 .grid-container {
     width: 95%;
     margin: auto;
     overflow: hidden;
+    background-size: cover;
+    padding: 0;
 }
 
 .contenedor {
@@ -108,11 +110,4 @@ button {
 
 .example-stretched-tabs {
     max-width: 800px;
-}
-
-p {
-    max-height: 3.5rem;
-    overflow: hidden;
-    text-align: justify;
-    text-overflow: ellipsis;
 }

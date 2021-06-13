@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12">
+            <div class="row py-5">
+                <div class="col-12">
+                    <form #formAdd="ngForm" (ngSubmit)="onSubmit()">
+                        <h6>Agregar Nombre</h6>
+                        <hr class="mb-4">
+                        <div class="example-container">
+                            <mat-form-field>
+                                <input matInput placeholder="Nombre de Usuario" name="nombre" #nombre="ngModel" [(ngModel)]="modelo.nombre" value={{modelo.nombre}} required>
+                                <mat-error *ngIf="!nombre.valid && nombre.touched">
+                                    Ingrese Nombre
+                                </mat-error>
+                            </mat-form-field>
+                            <hr class="mb-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Usuario" name="nombre" #nombre="ngModel" [(ngModel)]="modelo.userName" value={{modelo.userName}} required>
+                                <mat-error *ngIf="!nombre.valid && nombre.touched">
+                                    Ingrese Usuario
+                                </mat-error>
+                            </mat-form-field>
+                            <hr class="mb-4">
+
+                            <mat-form-field>
+                                <mat-select placeholder="Rol" name="user" #user="ngModel" [(ngModel)]="modelo.rol" required>
+                                    <mat-option *ngFor='let r of rolmodelo' [value]='r.rol' (click)="combo()">
+                                        {{r.rol}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <hr class="mb-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Email" name="nombre" #nombre="ngModel" [(ngModel)]="modelo.email" value={{modelo.email}} required>
+                                <mat-error *ngIf="!nombre.valid && nombre.touched">
+                                    Ingrese Email
+                                </mat-error>
+                            </mat-form-field>
+                            <hr class="mb-4">
+                            <mat-form-field>
+                                <input matInput placeholder="Contraseña" name="nombre" #nombre="ngModel" [(ngModel)]="modelo.pw" value={{modelo.pw}} required>
+                                <mat-error *ngIf="!nombre.valid && nombre.touched">
+                                    Ingrese Contraseña
+                                </mat-error>
+                            </mat-form-field>
+                            <hr class="mb-4">
+
+
+
+                        </div>
+                        <hr class="mb-4">
+                        <div class="btn-group btn-group-toggle">
+                            <label class="btn btn-secondary active">
+                                <input type="submit" value="Guardar" class="btn btn-secondary active">
+            
+                            </label>
+
+                            <label class="btn btn-secondary">
+                                <input type="button" class="btn btn-secondary" [routerLink]="['/seguridad']" value="Cancelar">
+                            </label>
+
+                        </div>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

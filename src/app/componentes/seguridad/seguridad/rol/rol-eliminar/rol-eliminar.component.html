@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12">
+            <div class="row py-5">
+                <div class="col-12">
+                    <form #formAdd="ngForm" (ngSubmit)="borrar()">
+                        <h6>Eliminar Rol</h6>
+
+                        <div class="example-container">
+                            <mat-form-field>
+                                <input matInput placeholder="Nombre del Autor" name="nombre" #nombre="ngModel" [(ngModel)]="modelo.rol" value={{modelo.rol}} required readonly>
+                                <mat-error *ngIf="!nombre.valid && nombre.touched">
+                                    Elimine
+                                </mat-error>
+                            </mat-form-field>
+
+                        </div>
+                        <hr class="mb-4">
+                        <div class="btn-group btn-group-toggle">
+                            <label class="btn btn-secondary active">
+                                <input type="submit" value="Eliminar" class="btn btn-secondary active">
+                            
+                            </label>
+
+                            <label class="btn btn-secondary">
+                                <input type="button" class="btn btn-secondary" [routerLink]="['/seguridad']" value="Cancelar">
+
+                            </label>
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

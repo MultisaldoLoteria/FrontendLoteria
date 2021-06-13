@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12">
+            <div class="row py-5">
+                <div class="col-12">
+                    <form #formAdd="ngForm" (ngSubmit)="onSumit()">
+                        <h6>Agregar nuevo Rol</h6>
+                        <hr class="mb-4">
+                        <div class="example-container">
+
+                            <mat-form-field>
+                                <mat-select matInput placeholder="Nombre del Rol" name="nombre" #nombre="ngModel" [(ngModel)]="modelo.rol" value={{modelo.rol}} required>
+
+
+                                    <mat-option value="admi">Aministrador </mat-option>
+                                    <mat-option value="operador">Operador</mat-option>
+                                    <mat-option value="interna">Interno</mat-option>
+                                    <mat-option value="confidencial">Confidencial</mat-option>
+
+                                </mat-select>
+
+                            </mat-form-field>
+                        </div>
+                        <hr class="mb-4">
+                        <div class="btn-group btn-group-toggle">
+                            <label class="btn btn-secondary active">
+                                <input type="submit" value="Guardar" class="btn btn-secondary active">
+            
+                            </label>
+
+                            <label class="btn btn-secondary">
+                                <input type="button" class="btn btn-secondary" [routerLink]="['/seguridad']" value="Cancelar">
+                            </label>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
